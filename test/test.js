@@ -13,8 +13,7 @@ describe('First two terms', function() {
     });
 });
 
-describe('negative fibonacci value', function() {
-  it('should exit the program when a negative number is present.', function(){
-    assert.strictEqual(main.fibonnaci(-1), exit);
-  });
+describe('should throw an error for negative input', function() {
+  expect(() => fibonacci(-1)).toThrow("Input cannot be negative for Fibonacci sequence.");
+  expect(() => fibonacci(-5)).toThrow("Input cannot be negative for Fibonacci sequence.");
 });
