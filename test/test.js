@@ -12,3 +12,9 @@ describe('First two terms', function() {
       assert.strictEqual(main.fibonacci(1), 1);
     });
 });
+
+describe('negative fibonacci value', function() {
+  it('should exit the program when a negative number is present.', function(){
+    assert.strictEqual(main.fibonnaci(-1), exit);
+  });
+});
