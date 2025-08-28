@@ -12,3 +12,8 @@ describe('First two terms', function() {
       assert.strictEqual(main.fibonacci(1), 1);
     });
 });
+
+describe('should throw an error for negative input', function() {
+  expect(() => fibonacci(-1)).toThrow("Input cannot be negative for Fibonacci sequence.");
+  expect(() => fibonacci(-5)).toThrow("Input cannot be negative for Fibonacci sequence.");
+});
